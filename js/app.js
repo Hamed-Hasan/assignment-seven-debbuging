@@ -66,7 +66,6 @@ const createPost = (post) => {
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
-
                 <button class="post__more-options">
                   <i class="fa-solid fa-ellipsis"></i>
                 </button>
