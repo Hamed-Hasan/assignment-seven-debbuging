@@ -16,17 +16,20 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
+    // ISSUE 1 Line: 20
     likedPostsId.push(id); 
     showPosts(posts);
 };
 
 const reportPost = (id) => {
+  // Issue 5 Line: 27
   const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
   reportedPostsId.push(id);
     showPosts(remainingPosts);
 };
 
 const displayContent = (text) => {
+  // Issue 3 Line: 32
     return text.length < 30 ?  text  : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
@@ -54,6 +57,8 @@ const createPost = (post) => {
     const image = post.image;
     const div = document.createElement( "article" );
     div.classList.add( "post" );
+    // Issue 2 User Image Line: 69
+    // Issue 4 Who Comment - What Comment Line: 126 - 128
     div.innerHTML = `
               <div class="post__header">
                 <div class="post__profile">
@@ -142,6 +147,7 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  // Issue 6 Line: 151
   document.getElementById( "liked" ).innerHTML = ''
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
@@ -151,8 +157,10 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+    // Issue 6 Line: 161
   document.getElementById( "reported" ).innerHTML = ''
     const reportedPosts = getReportedPosts();
+    // Issue 5 Line: 164
     reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
