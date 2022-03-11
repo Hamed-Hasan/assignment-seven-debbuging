@@ -46,12 +46,14 @@
         document.getElementById("liked").style.display = "block";
         document.getElementById("posts").style.display = "none";
         document.getElementById("reported").style.display = "none";
+        document.getElementById("timeLine").style.display = "none";
 
         displayLikedPosts();
       } else {
         document.getElementById("reported").style.display = "block";
         document.getElementById("posts").style.display = "none";
         document.getElementById("liked").style.display = "none";
+        document.getElementById("timeLine").style.display = "none";
 
         displayReportedPosts();
       }
@@ -101,9 +103,7 @@
 
                   <div class="post__indicators"></div>
 
-                  <button class="post__button post__button--align-right" onclick="reportPost(${
-                      post.id
-                  })">
+                  <button class="post__button post__button--align-right" onclick="reportPost(${post.id})">
                     <i class="fa-solid fa-ban"></i>
                   </button>
                 </div>
