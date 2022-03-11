@@ -27,13 +27,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    // return text < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
-    return text.length < 30 ?  text  : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>"  ;
-//  if(text.length < 30){
-//    return text = 'hell'
-//  }else{
-//   return text.slice(0, 30)  + "<span class='fw-bold'>... read more</span>"
-//  }
+    return text.length < 30 ?  text  : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
