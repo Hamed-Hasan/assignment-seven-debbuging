@@ -29,7 +29,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  // Issue 3 Line: 32
+  // Issue 3 Line: 33
     return text.length < 30 ?  text  : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
@@ -57,8 +57,8 @@ const createPost = (post) => {
     const image = post.image;
     const div = document.createElement( "article" );
     div.classList.add( "post" );
-    // Issue 2 User Image Line: 69
-    // Issue 4 Who Comment - What Comment Line: 126 - 128
+    // Issue 2 User Image Line: 70
+    // Issue 4 Who Comment - What Comment Line: 127 - 129
     div.innerHTML = `
               <div class="post__header">
                 <div class="post__profile">
@@ -67,7 +67,7 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${post.userImage}" class="1" alt="User Picture" />
+                    <img src="${post.userImage}"  alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
